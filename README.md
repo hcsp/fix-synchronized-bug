@@ -4,6 +4,8 @@
 
 请思考一下为什么，帮助小明修复这个bug。
 
+在提交Pull Request之前，你应当在本地确保所有代码已经编译通过，并且通过了测试(`mvn clean test`)
+
 -----
 注意！我们只允许你修改以下文件，对其他文件的修改会被拒绝：
 - [src/main/java/com/github/hcsp/multithread/Counter.java](https://github.com/hcsp/fix-synchronized-bug/blob/master/src/main/java/com/github/hcsp/multithread/Counter.java)
