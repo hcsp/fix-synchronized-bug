@@ -23,7 +23,7 @@ public class CounterTest {
                             () -> {
                                 safeSleep();
                                 counter.addAndGet(2);
-                                counter.minusAndGet(2);
+                                counter.minusAndGet(1);
                                 return null;
                             }));
         }
@@ -32,7 +32,7 @@ public class CounterTest {
             future.get();
         }
 
-        Assertions.assertEquals(0, counter.getValue());
+        Assertions.assertEquals(100, counter.getValue());
     }
 
     private void safeSleep() {
