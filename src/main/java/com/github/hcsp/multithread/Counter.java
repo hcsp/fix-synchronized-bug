@@ -20,6 +20,7 @@ public class Counter {
         synchronized (value) {
             value -= i;
             return value;
+
         }
     }
 }
