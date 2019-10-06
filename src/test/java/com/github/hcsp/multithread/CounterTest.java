@@ -18,7 +18,7 @@ public class CounterTest {
         List<Future<Void>> futures = new ArrayList<>();
 
         for (int i = 0; i < 100; ++i) {
-            futures.add(
+                futures.add(
                     threadPool.submit(
                             () -> {
                                 safeSleep();
