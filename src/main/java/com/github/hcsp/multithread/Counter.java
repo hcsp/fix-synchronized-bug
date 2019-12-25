@@ -6,10 +6,10 @@ public class Counter {
     public int getValue() {
         return value;
     }
-
+    //value是会变化的，导致锁住的对象是不同的
     // 加上一个整数i，并返回加之后的结果
     public int addAndGet(int i) {
-        synchronized (value) {
+        synchronized (this) {
             value += i;
             return value;
         }
@@ -17,7 +17,7 @@ public class Counter {
 
     // 减去一个整数i，并返回减之后的结果
     public int minusAndGet(int i) {
-        synchronized (value) {
+        synchronized (this) {
             value -= i;
             return value;
         }
