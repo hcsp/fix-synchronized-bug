@@ -2,8 +2,9 @@ package com.github.hcsp.multithread;
 
 public class Counter {
     private Integer value = 0;
-
+    private final Object lock = new Object();
     public int getValue() {
+
         return value;
     }
 
